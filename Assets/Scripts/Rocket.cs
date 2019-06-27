@@ -12,14 +12,13 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     private Rigidbody rigidbody;
+    private AudioSource audioSource;
 
-    // Start is called before the first frame update
     void Start()
     {
         this.rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         ProcessInput();
@@ -30,6 +29,7 @@ public class Rocket : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)) // Can thrust whilst rotating
         {
             EngageThrusters();
+            PlayThrusterSound();
         }
 
         if (Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.D))
@@ -43,13 +43,29 @@ public class Rocket : MonoBehaviour
     }
 
 
-    // Control Methods
+    // Thrusters
 
     private void EngageThrusters()
     {
         rigidbody.AddRelativeForce(Vector3.up);
 //        Debug.Log("Thrusters Engaged!");
     }
+
+    private void PlayThrusterSound()
+    {
+        this.audioSource = GetComponent<AudioSource>();
+        if (!this.audioSource.isPlaying) // prevent layering audio
+        {
+            this.audioSource.Play();
+        }
+        else
+        {
+            this.audioSource.Stop();
+        }
+    }
+
+
+    // Rotational Controls
 
     private void RotateLeft()
     {

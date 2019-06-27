@@ -11,7 +11,7 @@ using UnityEngine;
  */ 
 public class Rocket : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    private Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
@@ -48,16 +48,18 @@ public class Rocket : MonoBehaviour
     private void EngageThrusters()
     {
         rigidbody.AddRelativeForce(Vector3.up);
-        Debug.Log("Thrusters Engaged!");
+//        Debug.Log("Thrusters Engaged!");
     }
 
     private void RotateLeft()
     {
-        print("Rotating Left");
+        transform.Rotate(Vector3.forward);
+//        Debug.Log("Rotating Left");
     }
 
     private void RotateRight()
     {
-        print("Rotating Right");
+        transform.Rotate(-Vector3.forward);
+//        Debug.Log("Rotating Right");
     }
 }

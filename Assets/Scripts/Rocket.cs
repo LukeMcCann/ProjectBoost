@@ -14,6 +14,9 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
 
+    private float rcsThrust = 10f;
+    private float rotationThisFrame;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -64,6 +67,7 @@ public class Rocket : MonoBehaviour
         rigidBody.freezeRotation = true;
         if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
+            rotationThisFrame = rcsThrust * Time.deltaTime;
             RotateLeft();
         }
         else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))

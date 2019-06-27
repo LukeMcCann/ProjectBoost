@@ -11,10 +11,12 @@ using UnityEngine;
  */ 
 public class Rocket : MonoBehaviour
 {
+    Rigidbody rigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -40,9 +42,13 @@ public class Rocket : MonoBehaviour
         }
     }
 
+
+    // Control Methods
+
     private void EngageThrusters()
     {
-        print("Thrust Active");
+        rigidbody.AddRelativeForce(Vector3.up);
+        Debug.Log("Thrusters Engaged!");
     }
 
     private void RotateLeft()

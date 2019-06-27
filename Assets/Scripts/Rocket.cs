@@ -11,12 +11,12 @@ using UnityEngine;
  */ 
 public class Rocket : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    Rigidbody rigidBody;
     AudioSource audioSource;
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -37,14 +37,7 @@ public class Rocket : MonoBehaviour
             audioSource.Stop();
         }
 
-        if (Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.D))
-        {
-            RotateLeft();
-        }
-        else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
-        {
-            RotateRight();
-        }
+        ListenForRotate();
     }
 
 
@@ -52,8 +45,7 @@ public class Rocket : MonoBehaviour
 
     private void EngageThrusters()
     {
-        rigidbody.AddRelativeForce(Vector3.up);
-        //        Debug.Log("Thrusters Engaged!");
+        rigidBody.AddRelativeForce(Vector3.up);
     }
 
     private void PlayThrusterSound()
@@ -67,15 +59,27 @@ public class Rocket : MonoBehaviour
 
     // Rotational Controls
 
+    private void ListenForRotate()
+    {
+        rigidBody.freezeRotation = true;
+        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        {
+            RotateLeft();
+        }
+        else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
+        {
+            RotateRight();
+        }
+        rigidBody.freezeRotation = false; // Resume natural physics rotation controls
+    }
+
     private void RotateLeft()
     {
         transform.Rotate(Vector3.forward);
-//        Debug.Log("Rotating Left");
     }
 
     private void RotateRight()
     {
         transform.Rotate(-Vector3.forward);
-//        Debug.Log("Rotating Right");
     }
 }

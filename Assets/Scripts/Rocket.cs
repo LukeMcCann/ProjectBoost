@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 /**
@@ -22,10 +23,14 @@ public class Rocket : MonoBehaviour
     [SerializeField] private float rcsThrust = 100f;
     private float rotationThisFrame;
 
+    private int initialLevelIndex = 0;
+    private int currentLevelIndex;
+
     void Start()
     {
         this.rigidBody = GetComponent<Rigidbody>();
         this.audioSource = GetComponent<AudioSource>();
+        currentLevelIndex = 0;
     }
 
     void Update()
@@ -54,19 +59,46 @@ public class Rocket : MonoBehaviour
         {
             case "Friendly":
                 // do nothing
-                print("OK!");
                 break;
             case "Fuel":
                 print("Acquired Fuel!");
                 break;
             case "Finish":
                 print("You win!");
+                LoadNextLevelByIndex();
                 break;
             default:
                 print("You are dead!");
+                ResetProgress();
                 break;
         }
     }
+
+
+    // Progression Methods
+
+    private void ResetProgress()
+    {
+        currentLevelIndex = initialLevelIndex;
+        SceneManager.LoadScene(currentLevelIndex);
+    }
+
+    private void LoadNextLevelByIndex()
+    {
+        int nextLevelIndex = currentLevelIndex + 1;
+        int previousLevelIndex = currentLevelIndex - 1;
+
+        if (nextLevelIndex > SceneManager.sceneCount)
+        {
+            SceneManager.LoadScene(previousLevelIndex);
+            print("End of game!");
+        }
+        else
+        {
+            SceneManager.LoadScene(nextLevelIndex);
+        }
+    }
+
 
     // Thrusters
 

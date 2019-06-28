@@ -47,6 +47,7 @@ public class Rocket : MonoBehaviour
         ListenForRotate();
     }
 
+    // Special tags are friendly
     private void OnCollisionEnter(Collision collision)
     {
         switch(collision.gameObject.tag)

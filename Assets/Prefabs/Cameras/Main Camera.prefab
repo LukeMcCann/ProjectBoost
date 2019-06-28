@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3147648686457531569}
   - component: {fileID: 3147648686457531574}
   - component: {fileID: 3147648686457531575}
+  - component: {fileID: 1143495834}
   m_Layer: 0
-  m_Name: Main Camera 1
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3147648686457531572}
-  m_LocalRotation: {x: -0.025898391, y: -0, z: -0, w: 0.9996646}
+  m_LocalRotation: {x: -0.025897823, y: 0, z: 0, w: 0.9996646}
   m_LocalPosition: {x: 0, y: 4.99, z: -27.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -57,7 +58,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 53.151474
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -83,3 +84,17 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3147648686457531572}
   m_Enabled: 1
+--- !u!114 &1143495834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147648686457531572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c6b821481ee204f98b71237cf6fc88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  offset: {x: -1.829258, y: 7.77, z: 52.81}

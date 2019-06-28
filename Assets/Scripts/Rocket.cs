@@ -8,19 +8,24 @@ using UnityEngine;
  * Author: Luke McCann
  * 
  * handles rocket controls.
+ * 
+ * While the keyord 'this' is not neccessary for all cases in this file, 
+ * I like to be explicit for case of clarity and in case of future changes
+ * (e.g. a local var of the same name is placed).
  */ 
 public class Rocket : MonoBehaviour
 {
     Rigidbody rigidBody;
     AudioSource audioSource;
 
-    private float rcsThrust = 10f;
+    [SerializeField] private float mainThrust = 10f;
+    [SerializeField] private float rcsThrust = 100f;
     private float rotationThisFrame;
 
     void Start()
     {
-        rigidBody = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
+        this.rigidBody = GetComponent<Rigidbody>();
+        this.audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -37,9 +42,8 @@ public class Rocket : MonoBehaviour
         }
         else
         {
-            audioSource.Stop();
+            this.audioSource.Stop();
         }
-
         ListenForRotate();
     }
 
@@ -48,14 +52,14 @@ public class Rocket : MonoBehaviour
 
     private void EngageThrusters()
     {
-        rigidBody.AddRelativeForce(Vector3.up);
+        this.rigidBody.AddRelativeForce(Vector3.up * this.mainThrust);
     }
 
     private void PlayThrusterSound()
     {
         if (!audioSource.isPlaying)
         {
-            audioSource.Play();
+            this.audioSource.Play();
         }
     }
 
@@ -64,26 +68,27 @@ public class Rocket : MonoBehaviour
 
     private void ListenForRotate()
     {
-        rigidBody.freezeRotation = true;
+        this.rigidBody.freezeRotation = true; // take manual control of rotation
+
+        this.rotationThisFrame = this.rcsThrust * Time.deltaTime;
         if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
-            rotationThisFrame = rcsThrust * Time.deltaTime;
-            RotateLeft();
+            RotateLeft(rotationThisFrame);
         }
         else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
         {
-            RotateRight();
+            RotateRight(rotationThisFrame);
         }
-        rigidBody.freezeRotation = false; // Resume natural physics rotation controls
+        this.rigidBody.freezeRotation = false; // Resume natural physics rotation controls
     }
 
-    private void RotateLeft()
+    private void RotateLeft(float rotationThisFrame)
     {
-        transform.Rotate(Vector3.forward);
+        transform.Rotate(Vector3.forward * rotationThisFrame);
     }
 
-    private void RotateRight()
+    private void RotateRight(float rotationThisFrame)
     {
-        transform.Rotate(-Vector3.forward);
+        transform.Rotate(-Vector3.forward * rotationThisFrame);
     }
 }

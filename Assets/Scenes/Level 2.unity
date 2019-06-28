@@ -120,160 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &32390466
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7755512830982478431, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_Name
-      value: Large Vertical Red Rock Obstacle (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 23.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 59.892464
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e2f1883fcd273fd41b734b9f4efaa61f, type: 3}
 --- !u!1 &356550268 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 604648799864465354, guid: 3baac584c45376646bb7ee854b43c8a5,
     type: 3}
   m_PrefabInstance: {fileID: 1645603117}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &447413352
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7755512830982478431, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_Name
-      value: Horizontal Red Rock Obstacle (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -21.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 69.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 33.905533
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e2f1883fcd273fd41b734b9f4efaa61f, type: 3}
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 1425179200391919543, guid: 4300262c91942f84982954aa9cb1b138,
@@ -300,7 +152,7 @@ PrefabInstance:
     - target: {fileID: 604648799864465355, guid: 3baac584c45376646bb7ee854b43c8a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.38
+      value: 73.4
       objectReference: {fileID: 0}
     - target: {fileID: 604648799864465355, guid: 3baac584c45376646bb7ee854b43c8a5,
         type: 3}
@@ -418,75 +270,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1b2d4c4740a0c46b68157d207b52ae, type: 3}
---- !u!1001 &215258622469364376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7592467846233604776, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_Name
-      value: Veritcal Red Rock Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -19.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560648477068681520, guid: 6a787773d0f11e64a9b4dc43e0b394b8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6a787773d0f11e64a9b4dc43e0b394b8, type: 3}
 --- !u!1001 &383780796573326719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,7 +290,7 @@ PrefabInstance:
     - target: {fileID: 8344894180845497697, guid: 592d345eaa7d42e4fa7d77b54cc2a66a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.103
+      value: 70.37
       objectReference: {fileID: 0}
     - target: {fileID: 8344894180845497697, guid: 592d345eaa7d42e4fa7d77b54cc2a66a,
         type: 3}
@@ -556,6 +339,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592d345eaa7d42e4fa7d77b54cc2a66a, type: 3}
+--- !u!1001 &799917137077707462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3379049826991012414, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_Name
+      value: Top Left Cave Rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184921674549706028, guid: 4dfb494c2121623458b74220baa66e82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4dfb494c2121623458b74220baa66e82, type: 3}
 --- !u!1001 &1425179200828966189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -723,144 +575,75 @@ PrefabInstance:
       objectReference: {fileID: 356550268}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bc70dcd03308c498d2e67bce57be1c, type: 3}
---- !u!1001 &3151249093396751779
+--- !u!1001 &5688986411525267611
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4619111634272127374, guid: 5a04a60980b71e549a638314e6b006d9,
+    - target: {fileID: 6924175669289964372, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_Name
-      value: 'Large Vertical Red Rock Obstacle '
+      value: Top Left Cave Rocks (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -35.67
       objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43
+      value: -0.68
       objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -44.31
       objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350799174847474198, guid: 5a04a60980b71e549a638314e6b006d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5a04a60980b71e549a638314e6b006d9, type: 3}
---- !u!1001 &6851046165682566299
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7755512830982478431, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_Name
-      value: Horizontal Red Rock Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -33.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 51.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.6933071
       objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7206423
       objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 87.785
       objectReference: {fileID: 0}
-    - target: {fileID: 376915068583901639, guid: e2f1883fcd273fd41b734b9f4efaa61f,
+    - target: {fileID: 8421875239651415110, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e2f1883fcd273fd41b734b9f4efaa61f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ba2fdc24e8183ac4aa39ffbdec15a9d7, type: 3}
 --- !u!1001 &9222569701055404367
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -47,6 +47,10 @@ public class Rocket : MonoBehaviour
         ListenForRotate();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("Collision Detected");
+    }
 
     // Thrusters
 

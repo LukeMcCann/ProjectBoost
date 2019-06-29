@@ -31,7 +31,7 @@ public class Rocket : MonoBehaviour
 
     // Level Tracking
 
-    private int initialLevelIndex = 0, currentLevelIndex;
+    private int currentSceneIndex;
 
     // Resources
 
@@ -41,9 +41,9 @@ public class Rocket : MonoBehaviour
 
     void Start()
     {
+        this.currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         this.rigidBody = GetComponent<Rigidbody>();
         this.audioSource = GetComponent<AudioSource>();
-        currentLevelIndex = 0;
     }
 
     void Update()
@@ -86,7 +86,7 @@ public class Rocket : MonoBehaviour
                 break;
             default:
                 state = State.Dying;
-                Invoke("ResetProgress", 1f);
+                Invoke("ResetLevel", 1f);
                 break;
         }
     }
@@ -94,25 +94,21 @@ public class Rocket : MonoBehaviour
 
     // Progression Methods
 
-    private void ResetProgress()
+    private void ResetLevel()
     {
-        currentLevelIndex = initialLevelIndex;
-        SceneManager.LoadScene(currentLevelIndex);
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     private void LoadNextLevelByIndex()
     {
-        int nextLevelIndex = currentLevelIndex + 1;
-        int previousLevelIndex = currentLevelIndex - 1;
-
-        if (nextLevelIndex > SceneManager.sceneCount)
+        if(currentSceneIndex == SceneManager.sceneCountInBuildSettings-1)
         {
-            print("End of game!");
-            SceneManager.LoadScene(previousLevelIndex);
+            print("End of Game!");
         }
         else
         {
-            SceneManager.LoadScene(nextLevelIndex);
+            int nextScene = currentSceneIndex + 1;
+            SceneManager.LoadScene(nextScene);
         }
     }
 
@@ -163,7 +159,6 @@ public class Rocket : MonoBehaviour
             this.audioSource.Play();
         }
     }
-
 
     // Rotational Controls
 

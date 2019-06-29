@@ -751,6 +751,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8166902638620721004, guid: 3baac584c45376646bb7ee854b43c8a5,
+        type: 3}
+      propertyPath: fuelBar
+      value: 
+      objectReference: {fileID: 3147648686078525894}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3baac584c45376646bb7ee854b43c8a5, type: 3}
 --- !u!1001 &1785899493
@@ -1339,6 +1344,18 @@ PrefabInstance:
       objectReference: {fileID: 356550268}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bc70dcd03308c498d2e67bce57be1c, type: 3}
+--- !u!114 &3147648686078525894 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3147648687827509105, guid: 77bc70dcd03308c498d2e67bce57be1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3147648686078525893}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9975e1a8a141b07419f840f283fd0dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5688986411525267611
 PrefabInstance:
   m_ObjectHideFlags: 0

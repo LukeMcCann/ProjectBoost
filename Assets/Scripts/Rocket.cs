@@ -64,6 +64,7 @@ public class Rocket : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         state = State.Alive;
+
     }
 
     void Update()

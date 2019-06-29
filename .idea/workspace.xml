@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08a9a0c4-8fb9-473c-ad52-c1615a6e9541" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Build/UnityLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build/WebGLBoost.data.unityweb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build/WebGLBoost.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build/WebGLBoost.wasm.code.unityweb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build/WebGLBoost.wasm.framework.unityweb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/UnityProgress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/fullscreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/progressEmpty.Dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/progressEmpty.Light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/progressFull.Dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/progressFull.Light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/progressLogo.Dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/progressLogo.Light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemplateData/webgl-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cameras/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cameras/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player Models/Rocket Ship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player Models/Rocket Ship.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="327" />
+    <option name="y" value="162" />
+    <option name="width" value="1294" />
+    <option name="height" value="1394" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08a9a0c4-8fb9-473c-ad52-c1615a6e9541" name="Default Changelist" comment="" />
+      <created>1561850239335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561850239335</updated>
+      <workItem from="1561850241922" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="327" y="162" width="1294" height="1394" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959481" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+</project>

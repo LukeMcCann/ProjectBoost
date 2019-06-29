@@ -19,6 +19,8 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
 
+    private float rotationThisFrame;
+
     // Game States 
 
     enum State { Alive, Dying, Transcending };
@@ -27,7 +29,14 @@ public class Rocket : MonoBehaviour
     // Tweakables
 
     [SerializeField] private float mainThrust = 10f, rcsThrust = 100f;
-    private float rotationThisFrame;
+    [SerializeField] float fuel = 100;
+    [SerializeField] float consumptionRate = 5;
+
+    // Sound Files 
+
+    [SerializeField] AudioClip mainEngine;
+    [SerializeField] AudioClip explosion;
+    [SerializeField] AudioClip winSound;
 
     // Level Tracking
 
@@ -36,26 +45,29 @@ public class Rocket : MonoBehaviour
     // Resources
 
     public SimpleHealthBar fuelBar;
-    [SerializeField] float fuel = 100;
-    [SerializeField] float consumptionRate = 5;
 
     void Start()
     {
         this.currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         this.rigidBody = GetComponent<Rigidbody>();
         this.audioSource = GetComponent<AudioSource>();
+        state = State.Alive;
     }
 
     void Update()
     {
-        ProcessInput();
+        if(state != State.Dying)
+        {
+            ProcessInput();
+        }
     }
 
     private void ProcessInput()
     {
+        ListenForRotate();
         if (Input.GetKey(KeyCode.Space)) // Can thrust whilst rotating
         {
-            if(!fuelIsEmpty())
+            if (!fuelIsEmpty())
             {
                 EngageThrusters();
                 PlayThrusterSound();
@@ -63,14 +75,14 @@ public class Rocket : MonoBehaviour
         }
         else
         {
-            this.audioSource.Stop();
+            audioSource.Stop();
         }
-        ListenForRotate();
     }
 
     // Special tags are friendly
     private void OnCollisionEnter(Collision collision)
     {
+        if(state != State.Alive) { return; } // ignore collisions when dead
         switch(collision.gameObject.tag)
         {
             case "Friendly":
@@ -86,11 +98,21 @@ public class Rocket : MonoBehaviour
                 break;
             default:
                 state = State.Dying;
+                audioSource.PlayOneShot(explosion);
                 Invoke("ResetLevel", 1f);
                 break;
         }
     }
 
+
+    // Explosion
+
+    private void ExplodeShip()
+    {
+        if(state != State.Dying) { return; }
+        audioSource.PlayOneShot(explosion);
+        print("Bang!");
+    }
 
     // Progression Methods
 
@@ -156,7 +178,15 @@ public class Rocket : MonoBehaviour
     {
         if (!audioSource.isPlaying)
         {
-            this.audioSource.Play();
+            audioSource.PlayOneShot(mainEngine);
+        }
+    }
+
+    private void StopThrusterSound()
+    {
+        if(audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 

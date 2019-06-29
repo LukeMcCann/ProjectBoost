@@ -347,9 +347,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 10
   rcsThrust: 150
-  fuelBar: {fileID: 0}
   fuel: 100
   consumptionRate: 10
+  mainEngine: {fileID: 8300000, guid: d6957b9e8b18ff944bff8c20ecf77077, type: 3}
+  explosion: {fileID: 8300000, guid: 3f766f17c6ab10745aac0a9414276abb, type: 3}
+  winSound: {fileID: 8300000, guid: 97f6a9179704975409cbb91aed5e80fe, type: 3}
+  fuelBar: {fileID: 0}
 --- !u!1 &604648800037409155
 GameObject:
   m_ObjectHideFlags: 0

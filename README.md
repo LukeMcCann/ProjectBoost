@@ -1,4 +1,4 @@
-Project Boost
+Project Boost - This is the first non text based game I have ever made :D
 
 Author: Luke McCann
 

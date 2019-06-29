@@ -10,9 +10,8 @@ using UnityEngine;
  * 
  * handles rocket controls.
  * 
- * While the keyord 'this' is not neccessary for all cases in this file, 
- * I like to be explicit for case of clarity and in case of future changes
- * (e.g. a local var of the same name is placed).
+ * This code does not utilise all best practices. This project is a thrown together prototype for
+ * the Udemy Course (C# and Unity 3D). 
  */ 
 public class Rocket : MonoBehaviour
 {
@@ -23,7 +22,7 @@ public class Rocket : MonoBehaviour
 
     // Game States 
 
-    enum State { Alive, Dying, Transcending };
+    enum State { Alive, Dying, Transcending, Falling};
     State state = State.Alive;
 
     // Tweakables
@@ -36,7 +35,15 @@ public class Rocket : MonoBehaviour
 
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip explosion;
-    [SerializeField] AudioClip winSound;
+    [SerializeField] AudioClip success;
+    [SerializeField] AudioClip fall;
+    [SerializeField] AudioClip rotate;
+
+    // Particles
+
+    [SerializeField] ParticleSystem explode;
+    [SerializeField] ParticleSystem completion;
+    [SerializeField] ParticleSystem engineFumes;
 
     // Level Tracking
 
@@ -48,15 +55,15 @@ public class Rocket : MonoBehaviour
 
     void Start()
     {
-        this.currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        this.rigidBody = GetComponent<Rigidbody>();
-        this.audioSource = GetComponent<AudioSource>();
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        rigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         state = State.Alive;
     }
 
     void Update()
     {
-        if(state != State.Dying)
+        if (state != State.Dying)
         {
             ProcessInput();
         }
@@ -65,24 +72,26 @@ public class Rocket : MonoBehaviour
     private void ProcessInput()
     {
         ListenForRotate();
+        ListenForFreeFall();
         if (Input.GetKey(KeyCode.Space)) // Can thrust whilst rotating
         {
-            if (!fuelIsEmpty())
-            {
-                EngageThrusters();
-                PlayThrusterSound();
-            }
+            if(FuelIsEmpty()) { return; }
+            EngageThrusters();
+            engineFumes.Play();
+            PlayThrusterSound();
+        
         }
         else
         {
             audioSource.Stop();
+            engineFumes.Stop();
         }
     }
 
     // Special tags are friendly
     private void OnCollisionEnter(Collision collision)
     {
-        if(state != State.Alive) { return; } // ignore collisions when dead
+        if(state == State.Dying) { return; } // ignore collisions when dead
         switch(collision.gameObject.tag)
         {
             case "Friendly":
@@ -93,25 +102,91 @@ public class Rocket : MonoBehaviour
                 AddFuel();
                 break;
             case "Finish":
-                state = State.Transcending;
-                Invoke("LoadNextLevelByIndex", 1f);
+                StartSuccessSequence();
                 break;
             default:
-                state = State.Dying;
-                audioSource.PlayOneShot(explosion);
-                Invoke("ResetLevel", 1f);
+                StartDeathSequence();
                 break;
         }
     }
 
+    // Successful Completion Methods
 
-    // Explosion
+    private void StartSuccessSequence()
+    {
+        state = State.Transcending;
+
+        if(state == State.Transcending)
+        {
+            PlayTranscendSound();
+            completion.Play();
+            Invoke("LoadNextLevelByIndex", 2f);
+        }
+
+    }
+
+    private void PlayTranscendSound()
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(success);
+    }
+
+
+    // Fall methods
+
+    private void ListenForFreeFall()
+    {
+        if (FuelIsEmpty())
+        {
+            state = State.Falling;
+            FreeFall();
+        }
+    }
+
+    private void FreeFall()
+    {
+        if (state == State.Falling)
+        {
+            print("Falling");
+            RotateRight(rotationThisFrame);
+            PlaySpinSound();
+            PlayFallSound();
+        }
+    }
+
+    private void PlayFallSound()
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(fall);
+    }
+
+    private void PlaySpinSound()
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(rotate);
+    }
+
+    // Death Methods
+
+
+    private void StartDeathSequence()
+    {
+        state = State.Dying;
+        ExplodeShip();
+        Invoke("ResetLevel", 1f);
+    }
 
     private void ExplodeShip()
     {
         if(state != State.Dying) { return; }
+        PlayExplosionSound();
+        explode.Play();
+    }
+
+    private void PlayExplosionSound()
+    {
+        audioSource.Stop();
         audioSource.PlayOneShot(explosion);
-        print("Bang!");
     }
 
     // Progression Methods
@@ -154,7 +229,7 @@ public class Rocket : MonoBehaviour
         }
     }
 
-    private bool fuelIsEmpty()
+    private bool FuelIsEmpty()
     {
         if(fuel <= 0)
         {
@@ -166,12 +241,14 @@ public class Rocket : MonoBehaviour
         }
     }
 
+
     // Thrusters
 
     private void EngageThrusters()
     {
         this.rigidBody.AddRelativeForce(Vector3.up * this.mainThrust);
         DepleteFuel();
+        engineFumes.Play();
     }
 
     private void PlayThrusterSound()

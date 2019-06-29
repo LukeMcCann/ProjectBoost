@@ -72,8 +72,12 @@ public class Rocket : MonoBehaviour
         {
             ProcessInput();
         }
-        // todo: only if debug on
-        RespondToDebugKeys();
+
+        if(Debug.isDebugBuild)
+        {
+            RespondToDebugKeys();
+        }
+       
     }
 
     private void ProcessInput()

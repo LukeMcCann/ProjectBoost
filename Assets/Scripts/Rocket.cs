@@ -35,7 +35,9 @@ public class Rocket : MonoBehaviour
 
     // Resources
 
+    public SimpleHealthBar fuelBar;
     [SerializeField] float fuel = 100;
+    [SerializeField] float consumptionRate = 5;
 
     void Start()
     {
@@ -53,8 +55,11 @@ public class Rocket : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space)) // Can thrust whilst rotating
         {
-            EngageThrusters();
-            PlayThrusterSound();
+            if(!fuelIsEmpty())
+            {
+                EngageThrusters();
+                PlayThrusterSound();
+            }
         }
         else
         {
@@ -73,6 +78,7 @@ public class Rocket : MonoBehaviour
                 break;
             case "Fuel":
                 print("Acquired Fuel!");
+                AddFuel();
                 break;
             case "Finish":
                 state = State.Transcending;
@@ -114,9 +120,31 @@ public class Rocket : MonoBehaviour
 
     private void DepleteFuel()
     {
-        if(this.fuel > 0)
+        if(fuel > 0)
         {
-            this.fuel--;
+            this.fuel -= this.consumptionRate * Time.deltaTime;
+            this.fuelBar.UpdateBar(fuel, 100);
+        }
+    }
+
+    private void AddFuel()
+    {
+        if(this.fuel < 1f)
+        {
+            this.fuel += (this.consumptionRate*2)* Time.deltaTime;
+            this.fuelBar.UpdateBar(fuel, 100);
+        }
+    }
+
+    private bool fuelIsEmpty()
+    {
+        if(fuel <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -125,6 +153,7 @@ public class Rocket : MonoBehaviour
     private void EngageThrusters()
     {
         this.rigidBody.AddRelativeForce(Vector3.up * this.mainThrust);
+        DepleteFuel();
     }
 
     private void PlayThrusterSound()

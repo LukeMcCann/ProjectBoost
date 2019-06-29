@@ -347,7 +347,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 10
   rcsThrust: 150
+  fuelBar: {fileID: 0}
   fuel: 100
+  consumptionRate: 10
 --- !u!1 &604648800037409155
 GameObject:
   m_ObjectHideFlags: 0

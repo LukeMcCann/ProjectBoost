@@ -19,12 +19,23 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
 
-    [SerializeField] private float mainThrust = 10f;
-    [SerializeField] private float rcsThrust = 100f;
+    // Game States 
+
+    enum State { Alive, Dying, Transcending };
+    State state = State.Alive;
+
+    // Tweakables
+
+    [SerializeField] private float mainThrust = 10f, rcsThrust = 100f;
     private float rotationThisFrame;
 
-    private int initialLevelIndex = 0;
-    private int currentLevelIndex;
+    // Level Tracking
+
+    private int initialLevelIndex = 0, currentLevelIndex;
+
+    // Resources
+
+    [SerializeField] float fuel = 100;
 
     void Start()
     {
@@ -64,12 +75,12 @@ public class Rocket : MonoBehaviour
                 print("Acquired Fuel!");
                 break;
             case "Finish":
-                print("You win!");
-                LoadNextLevelByIndex();
+                state = State.Transcending;
+                Invoke("LoadNextLevelByIndex", 1f);
                 break;
             default:
-                print("You are dead!");
-                ResetProgress();
+                state = State.Dying;
+                Invoke("ResetProgress", 1f);
                 break;
         }
     }
@@ -90,8 +101,8 @@ public class Rocket : MonoBehaviour
 
         if (nextLevelIndex > SceneManager.sceneCount)
         {
-            SceneManager.LoadScene(previousLevelIndex);
             print("End of game!");
+            SceneManager.LoadScene(previousLevelIndex);
         }
         else
         {
@@ -99,6 +110,15 @@ public class Rocket : MonoBehaviour
         }
     }
 
+    // Fuel Control
+
+    private void DepleteFuel()
+    {
+        if(this.fuel > 0)
+        {
+            this.fuel--;
+        }
+    }
 
     // Thrusters
 

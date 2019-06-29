@@ -230,7 +230,7 @@ Rigidbody:
   m_GameObject: {fileID: 604648799864465354}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.4
+  m_Drag: 0.7
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -249,13 +249,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6957b9e8b18ff944bff8c20ecf77077, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.64
-  m_Pitch: 0.8
+  m_Volume: 0.312
+  m_Pitch: 0.7
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 106
   DopplerLevel: 2.67
   MinDistance: 1
   MaxDistance: 500
@@ -347,6 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 10
   rcsThrust: 150
+  fuel: 100
 --- !u!1 &604648800037409155
 GameObject:
   m_ObjectHideFlags: 0

@@ -54,6 +54,10 @@ public class Rocket : MonoBehaviour
 
     public SimpleHealthBar fuelBar;
 
+    // Debug
+
+    private bool collisionsDisabled = false;
+
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -68,6 +72,8 @@ public class Rocket : MonoBehaviour
         {
             ProcessInput();
         }
+        // todo: only if debug on
+        RespondToDebugKeys();
     }
 
     private void ProcessInput()
@@ -92,7 +98,7 @@ public class Rocket : MonoBehaviour
     // Special tags are friendly
     private void OnCollisionEnter(Collision collision)
     {
-        if(state == State.Dying) { return; } // ignore collisions when dead
+        if(state == State.Dying || collisionsDisabled) { return; } // ignore collisions when dead
         switch(collision.gameObject.tag)
         {
             case "Friendly":
@@ -318,5 +324,19 @@ public class Rocket : MonoBehaviour
     public void SetFuel(float fuel)
     {
         this.fuel = fuel;
+    }
+
+    // Developer Only
+
+    private void RespondToDebugKeys()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevelByIndex();
+        }
+        else if(Input.GetKeyDown(KeyCode.C))
+        {
+            collisionsDisabled = !collisionsDisabled;
+        }
     }
 }

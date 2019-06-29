@@ -22,7 +22,7 @@ public class Rocket : MonoBehaviour
 
     // Game States 
 
-    enum State { Alive, Dying, Transcending, Falling};
+    enum State { Alive, Dying, Transcending, Falling, Charging};
     State state = State.Alive;
 
     // Tweakables
@@ -30,6 +30,7 @@ public class Rocket : MonoBehaviour
     [SerializeField] private float mainThrust = 10f, rcsThrust = 100f;
     [SerializeField] float fuel = 100;
     [SerializeField] float consumptionRate = 5;
+    [SerializeField] float refreshRate = 20;
 
     // Sound Files 
 
@@ -97,6 +98,9 @@ public class Rocket : MonoBehaviour
             case "Friendly":
                 // do nothing
                 break;
+            case "Charger":
+                recoverFuel();
+                break ;
             case "Fuel":
                 print("Acquired Fuel!");
                 AddFuel();
@@ -241,12 +245,23 @@ public class Rocket : MonoBehaviour
         }
     }
 
+    public void recoverFuel()
+    {
+        if (fuel < 100)
+        {
+            while(fuel < 100)
+            {
+                this.fuel += this.refreshRate * Time.deltaTime;
+                this.fuelBar.UpdateBar(fuel, 100);
+            }
+        }
+    }
 
     // Thrusters
 
     private void EngageThrusters()
     {
-        this.rigidBody.AddRelativeForce(Vector3.up * this.mainThrust);
+        this.rigidBody.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
         DepleteFuel();
         engineFumes.Play();
     }
@@ -293,5 +308,17 @@ public class Rocket : MonoBehaviour
     private void RotateRight(float rotationThisFrame)
     {
         transform.Rotate(-Vector3.forward * rotationThisFrame);
+    }
+
+    // Getters and Setter
+
+    public float GetFuel()
+    {
+        return this.fuel;
+    }
+
+    public void SetFuel(float fuel)
+    {
+        this.fuel = fuel;
     }
 }

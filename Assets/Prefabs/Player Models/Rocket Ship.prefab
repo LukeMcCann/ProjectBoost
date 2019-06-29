@@ -352,6 +352,7 @@ MonoBehaviour:
   rcsThrust: 150
   fuel: 100
   consumptionRate: 10
+  refreshRate: 20
   mainEngine: {fileID: 8300000, guid: d6957b9e8b18ff944bff8c20ecf77077, type: 3}
   explosion: {fileID: 8300000, guid: 3f766f17c6ab10745aac0a9414276abb, type: 3}
   success: {fileID: 8300000, guid: a2441acbed24f4749a1075cc83bbfc3b, type: 3}

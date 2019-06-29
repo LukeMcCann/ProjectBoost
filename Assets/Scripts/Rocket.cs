@@ -120,12 +120,10 @@ public class Rocket : MonoBehaviour
     {
         state = State.Transcending;
 
-        if(state == State.Transcending)
-        {
-            PlayTranscendSound();
-            completion.Play();
-            Invoke("LoadNextLevelByIndex", 2f);
-        }
+        if(state != State.Transcending) { return; }
+         PlayTranscendSound();
+         completion.Play();
+         Invoke("LoadNextLevelByIndex", 2f);
 
     }
 

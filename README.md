@@ -15,3 +15,9 @@ To Play:
 
 The aim is to find and reach the goal block indicated by the flag before
 your fuel runs out!
+
+
+
+Play Here: 
+
+https://lukemccann.github.io/ProtoBoost/
